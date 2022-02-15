@@ -7,10 +7,10 @@ const Pagina404 = () => {
         <div>
             <main className = "container flex flex--centro flex--coluna"> 
                 <img  className = "doguito-imagem" src = { imagem } alt = "ilustração doguito" />
+                <p className = "naoencontrado-texto">
+                    Ops, Essa página não existe
+                </p>
             </main>
-            <p className = "naoencontrado-texto">
-                Ops, Essa página não existe
-            </p>
         </div>
     )
 }
