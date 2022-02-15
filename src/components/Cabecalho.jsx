@@ -1,6 +1,7 @@
 import React from 'react';
 import imagem from '../assets/img/doguito.svg';
 import '../assets/css/componentes/cabecalho.css';
+import { Link } from 'react-router-dom';
 const Cabecalho = () => {
     return(
         <header className = "cabecalho container">
@@ -8,37 +9,37 @@ const Cabecalho = () => {
                 <span className = "menu-hamburger_icone"></span>
             </div>
             <div className = "cabecalho-container">
-                <a href="/" className = "flex flex--centro">
+                <Link to="/" className = "flex flex--centro">
                     <img className = "cabecalho__logo" src= { imagem } alt="Logo Doguito" />
                     <h1 className = "cabecalho_titulo">PetShop</h1>
-                </a>
+                </Link>
             </div>
 
             <nav className = "menu-cabecalho">
                 <ul className = "menu-itens">
                     <li>
-                        <a 
-                            href="#" 
+                        <Link 
+                            to="#" 
                             className = "menu-item menu-item--entrar"
-                        >Entrar</a>
+                        >Entrar</Link>
                     </li>
                     <li>
-                        <a 
-                            href="#" 
+                        <Link 
+                            to="#" 
                             className = "menu-item"
-                        >Produtos</a>
+                        >Produtos</Link>
                     </li>
                     <li>
-                        <a 
-                            href="/" 
+                        <Link 
+                            to="/" 
                             className = "menu-item"
-                        >Blog</a>
+                        >Blog</Link>
                     </li>
                     <li>
-                        <a 
-                            href="/sobre" 
+                        <Link 
+                            to="/sobre" 
                             className = "menu-item"
-                        >Sobre</a>
+                        >Sobre</Link>
                     </li>
                 </ul>
             </nav>
