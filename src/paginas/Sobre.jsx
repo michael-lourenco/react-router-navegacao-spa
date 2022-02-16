@@ -1,7 +1,6 @@
-import React from 'react'
+import React from "react";
 
-
-import '../assets/css/componentes/cartao.css'
+import "../assets/css/componentes/cartao.css";
 
 const Sobre = () => {
 
@@ -20,4 +19,4 @@ const Sobre = () => {
   )
 }
 
-export default Sobre
+export default Sobre;

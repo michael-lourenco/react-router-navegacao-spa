@@ -1,22 +1,23 @@
-import React, { useState, useEffect } from 'react'
-import ListaCategorias from '../components/ListaCategorias'
-import ListaPost from '../components/ListaPost'
-import '../assets/css/blog.css'
-import { Route, useParams, useRouteMatch, Link, Switch } from 'react-router-dom'
-import { busca } from '../api/api'
-import SubCategoria from '../paginas/SubCategoria'
+import React, { useState, useEffect } from "react";
+import ListaCategorias from "../components/ListaCategorias";
+import ListaPost from "../components/ListaPost";
+import "../assets/css/blog.css";
+import { Route, useParams, useRouteMatch, Link, Switch } from "react-router-dom";
+import { busca } from "../api/api";
+import SubCategoria from "../paginas/SubCategoria";
 
 
 const Categoria = () => {
-  const { id } = useParams()
-  const { url, path } = useRouteMatch()
-  const [subcategorias, setSubCategorias] = useState([])
+  const { id } = useParams();
+  const { url, path } = useRouteMatch();
+  const [subcategorias, setSubCategorias] = useState([]);
 
   useEffect(() => {
     busca(`/categorias/${id}`, (categoria) => {
       setSubCategorias(categoria.subcategorias)
     })
-  }, [id])
+  }, [id]);
+
   return (
     <>
       <div className="container">
@@ -50,4 +51,4 @@ const Categoria = () => {
     </>
   )
 }
-export default Categoria
+export default Categoria;

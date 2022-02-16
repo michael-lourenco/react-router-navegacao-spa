@@ -1,19 +1,19 @@
-import React, {useState, useEffect } from 'react'
-import { useParams, useHistory } from 'react-router-dom'
-import { busca } from '../api/api'
-import '../assets/css/post.css'
+import React, {useState, useEffect } from "react";
+import { useParams, useHistory } from "react-router-dom";
+import { busca } from "../api/api";
+import "../assets/css/post.css";
 
 const Post = () => { 
-  let history = useHistory()
-  const { id } = useParams()
-  const[post, setPost] = useState({})
+  let history = useHistory();
+  const { id } = useParams();
+  const[post, setPost] = useState({});
 
   useEffect(() => {
     busca(`/posts/${id}`, setPost)
     .catch(()=>{
-      history.push('/404')
+      history.push("/404")
     })
-  }, [id])
+  }, [id]);
 
   return(
     <main className="container flex flex--centro">
@@ -25,4 +25,4 @@ const Post = () => {
   )
 }
 
-export default Post
+export default Post;

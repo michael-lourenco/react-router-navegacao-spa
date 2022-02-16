@@ -1,6 +1,6 @@
-import React from 'react';
-import imagem from '../assets/img/doguito404.svg';
-import '../assets/css/404.css';
+import React from "react";
+import imagem from "../assets/img/doguito404.svg";
+import "../assets/css/404.css";
 
 const Pagina404 = () => {
     return (

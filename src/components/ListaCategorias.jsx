@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { busca } from '../api/api';
-import '../assets/css/blog.css';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { busca } from "../api/api";
+import "../assets/css/blog.css";
 
 const ListaCategoria = () => {
     const [categorias, setCategorias] = useState([]);
 
     useEffect(() => {
         busca(`/categorias`, setCategorias)
-    },[])
+    },[]);
 
     return (
         <ul className = "lista-categorias container flex">
