@@ -16,7 +16,7 @@ const ListaCategoria = () => {
                 <Link className={`
                 cartao-categoria
                 cartao-categoria--${categoria.id}
-                `} to = { `/categoria/${ categoria.id }` }>
+                `} to = { `/categoria/${ categoria.id }` } key = { categoria.id }>
                     <li 
                         className={`
                             lista-categorias__categoria

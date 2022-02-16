@@ -3,7 +3,7 @@ import ListaPost from '../components/ListaPost';
 import { useParams } from 'react-router-dom';
 
 
-const Subcategoria = () => {
+const SubCategoria = () => {
     const { subcategoria } = useParams();
     
     return(
@@ -11,4 +11,4 @@ const Subcategoria = () => {
     )
 }
 
-export default Subcategoria;
+export default SubCategoria;
